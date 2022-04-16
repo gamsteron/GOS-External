@@ -248,7 +248,7 @@ function __gsoMana:_enoughMana(spell)
         costR = self.spellData.rm and self.spellData.rm or self.spellData.rf()
         cdr = myHero:GetSpellData(_R).currentCd
     end
-    local priority = self.priority[spell]
+    local priority = self.priority[spell] or 1
     local mana = myHero.mana
     local cdMax = 0
     for k,v in pairs(self.priority) do
